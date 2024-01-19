@@ -1,0 +1,84 @@
+*{
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+ select {
+      padding: 8px; /* Adjust padding as needed */
+      font-size: 16px; /* Adjust font size as needed */
+      border: 1px solid #ccc; /* Add a border */
+      border-radius: 4px; /* Optional: Add border radius for rounded corners */
+      background-color: #fff; /* Set background color */
+      color: #333; /* Set text color */
+    }
+.nav1{
+    display: flex;
+    background-color: black;
+    /* border: 2px solid grey; */
+    justify-content: space-evenly;
+    /* margin: 5px; */
+    /* margin-left: 20px; */
+    /* justify-content: center; */
+    padding: 5px;
+    align-items: center;
+}
+
+#location{
+    display: flex;
+    flex-direction: column;
+}
+#searchBar{
+    width: 40%;
+    height: 60%;
+    padding: 10px;
+    
+}
+.signIn, .order{
+   display: flex;
+    flex-direction: column;
+
+
+}
+
+#Search{
+    background-color: rgb(188, 132, 49);
+    color: black;
+    padding: 10px;
+}
+
+#logo{
+   padding: 5px; 
+}
+
+.nav2{
+    background-color: #1f2626;
+    /* padding: 8px; */
+    display: flex;
+    /* margin: 5px; */
+}
+.nav2 span:hover{
+    /* border: 1px solid white; */
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.nav1 span:hover{
+    /* border: 1px solid white; */
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.nav2 span{
+    padding: 10px 6px;
+}
+
+#leftText{
+    margin-left: auto;
+}
+.nav1 > span > img{
+    width: 100px;
+    height: 30px;
+}
