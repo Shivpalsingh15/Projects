@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr1</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .nav{
+            background: #2e2d2d;
+            display: flex;
+            /* flex-direction: column; */
+            padding: 10px;
+            justify-content: space-around;
+            color: aliceblue;
+        }
+        .nav div{
+            height: 200px;
+            width: 300px;
+            border: 2px solid rgb(161, 32, 32);
+            
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav div{
+                background: rgb(108, 126, 80);
+                text-align: center;
+                font-weight: bolder;
+                text-decoration: double;
+                color: black;
+            }
+            .nav{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    
+</body>
+</html>

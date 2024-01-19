@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Define three rows: auto for the navbar, 1fr for content, auto for the footer */
+            min-height: 100vh;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container for the four content boxes */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Create four columns with equal width */
+            gap: 20px;
+            justify-content: space-evenly;
+            align-items: stretch;
+            padding: 20px;
+        }
+
+        /* Style for each content box */
+        .content-box {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Container for the four content boxes -->
+    <div class="container">
+        <!-- First content box -->
+        <div class="content-box">
+            <h2>Box 1</h2>
+            <p>Your content here</p>
+        </div>
+
+        <!-- Second content box -->
+        <div class="content-box">
+            <h2>Box 2</h2>
+            <p>Your content here</p>
+        </div>
+
+        <!-- Third content box -->
+        <div class="content-box">
+            <h2>Box 3</h2>
+            <p>Your content here</p>
+        </div>
+
+        <!-- Fourth content box -->
+        <div class="content-box">
+            <h2>Box 4</h2>
+            <p>Your content here</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

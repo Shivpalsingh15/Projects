@@ -11,3 +11,6 @@ console.log("data:", data);
 
 let sorting = [15, 26, 41, 25, 32]
 console.log('sorting:', sorting.sort())
+
+let date = Date('1999-04-06')
+console.log('date:', date)
