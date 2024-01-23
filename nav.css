@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main {
+  background-color: aquamarine;
+  /* width: 100%; */
+}
+
+#main,
+#rightnav {
+  display: flex;
+  /* border: 1px solid red; */
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+/* #main{
+     width: 100%;
+} */
+#logo {
+  /* border: 1px solid red; */
+}
+#logo > img {
+  width: 100px;
+  height: 100%;
+}
+#rightnav {
+  margin-right: 50px;
+  width: 50%;
+  height: 100%;
+  font-size: 20px;
+  /* font-size: 50px; */
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+}

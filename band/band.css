@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(248, 247, 245);
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+    height: 50px;
+    align-items: center;
+    /* position: fixed;
+    top: 0; */
+    width: 100%;
+    /* padding: 10px; */
+}
+#rigthnav a{
+    /* display: flex;
+    justify-content: flex-end;
+    width: 50%; */
+    margin-right: 19px;
+
+ }
+#nav a{
+    text-decoration: none;
+    letter-spacing: 4px;
+    padding: 12px;
+    /* align-items: center; */
+}
+#nav a:hover{
+    background-color: grey;
+    /* padding: 5px; */
+}
+
+#mainImg{
+   
+    display: flex;
+    justify-content: center;
+}
+
+#image{
+    position: relative;
+    
+}
+#centerText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
