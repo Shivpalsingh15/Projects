@@ -47,3 +47,38 @@ body{
     top: 50%;
     left: 50%;
 }
+
+#project{
+    padding: 10px;
+    font-size: 19px;
+}
+    /* #first{
+        position: absolute;
+    }
+    #firstp{
+        position: relative;
+        top: 0;
+        padding: 5px;
+        color: white;
+        /* background-color: black; */
+        
+    } */
+
+/* .innerPhoto{
+    width: 50%;
+    height: 80px;
+    
+} */
+#eightPhoto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%; /* Adjust the width as needed */
+    margin: auto; /* Center the grid */
+}
+
+.innerPhoto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners for a nicer look */
+}

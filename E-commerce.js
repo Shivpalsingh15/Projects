@@ -16,8 +16,12 @@ async function getData(category, price, rating) {
   let data = await fetch("https://fakestoreapi.com/products");
   mainData = await data.json();
   console.log("mainData:", mainData);
+
+
   let finalfilteredarr = []
-   if ((category, price, rating)) {
+   if ((category && price && rating)) {
+    mainData.filter((el)=> )
+
    }
   mapping(mainData);
 }
