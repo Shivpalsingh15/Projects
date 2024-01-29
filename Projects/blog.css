@@ -1,0 +1,52 @@
+*{
+    font-family: "Raleway", sans-serif;;
+}body{
+    margin: 0;
+    padding: 0;
+}
+#first{
+    padding: 32px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: black;
+}
+#first p{
+   /* line-height: 1.5px; */
+    font-size: 15px;
+
+}
+#unknown{
+    background-color: black;
+    color: aliceblue;
+    padding: 0px 8px;
+    font-size: 15px;
+}
+#blog{
+    font-size: 36px;
+   /* line-height: 1.5px; */
+
+    font-weight: 400;
+    margin: 10px 0;
+}
+#body{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* margin: auto; */
+    border: 1px solid red;
+    /* justify-content: space-evenly; */
+    /* column-gap: -45px; */
+    justify-items: center;
+    /* align-items: center; */
+}
+.images{
+    width: min-content;
+    vertical-align: middle;
+}
+.secimage{
+    width: min-content;
+
+
+}
+#col{
+    width: inherit;
+}

@@ -3,27 +3,65 @@ var mainData = [];
 let category = document.getElementById("Category");
 category.addEventListener("change", getCategory);
 
-let rating = document.getElementById("Rating");
-rating.addEventListener("change", getRate);
+let sort = document.getElementById("Sorting");
+sort.addEventListener("change", getSorted);
 
-let price = document.getElementById("Price");
-price.addEventListener("change", getPrice);
-
-getData(category.value, price.value, rating.value);
-
-async function getData(category, price, rating) {
- 
+getData(category.value, sort.value);
+async function getData(category, sorting) {
   let data = await fetch("https://fakestoreapi.com/products");
   mainData = await data.json();
   console.log("mainData:", mainData);
+  if (category && sorting) {
+    //filter the data acooring to both parameters
+    console.log(category);
+    console.log(sorting);
+    let filterarr = mainData.filter((el) => el.category == category);
 
+    console.log("filterarr:", filterarr);
+    if (sorting == "LHR") {
+      filterarr.sort((a, b) => a.rating.rate - b.rating.rate);
+      mapping(filterarr)
+    } else if (sorting == "HLR") {
+      filterarr.sort((a, b) => b.rating.rate - a.rating.rate);
+      mapping(filterarr);
+    } else if (sorting == "HLP") {
+      filterarr.sort((a, b) => b.price - a.price);
+      mapping(filterarr);
+    } else if (sorting == "LHP") {
+      filterarr.sort((a, b) => a.price - b.price);
+      mapping(filterarr);
+    }
 
-  let finalfilteredarr = []
-   if ((category && price && rating)) {
-    mainData.filter((el)=> )
+  } else if (category) {
+    let filterarr = mainData.filter((el) => el.category == category);
+    
+      mapping(filterarr);
 
-   }
-  mapping(mainData);
+    // filter main data acording to slected caetgory
+    console.log("only category", category);
+  } else if (sorting) {
+    let filterarr = [...mainData]
+    
+     if (sorting == "LHR") {
+       filterarr.sort((a, b) => a.rating.rate - b.rating.rate);
+       mapping(filterarr);
+     } else if (sorting == "HLR") {
+       filterarr.sort((a, b) => b.rating.rate - a.rating.rate);
+       mapping(filterarr);
+     } else if (sorting == "HLP") {
+       filterarr.sort((a, b) => b.price - a.price);
+       mapping(filterarr);
+     } else if (sorting == "LHP") {
+       filterarr.sort((a, b) => a.price - b.price);
+       mapping(filterarr);
+     }
+    
+    // fitler main data accoring to selected sorted parameter
+    console.log("only sorting", sorting);
+  } else {
+    mapping(mainData);
+    console.log("kuch bhi nhi ", sorting, category);
+  }
 }
 
 function mapping(data) {
@@ -75,74 +113,28 @@ function mapping(data) {
   });
 }
 
-async function getCategory() {
-  getData(category.value, price.value, rating.value);
-  // let category = document.getElementById("Category");
-  // // console.log("category:", category.value);
-  // if (category.value) {
-  //   console.log(true);
-  //   let newData = mainData.filter((el) => el.category == category.value);
-
-  //   mapping(newData);
-  //   // mapping(sortedData);
-
-  // } else {
-  //   mapping(mainData);
-  // }
-  // newData.sort((a, b) => a.price - b.price);
+function getCategory() {
+  getData(category.value, sort.value);
 }
 
-async function getPrice() {
-  getData(category.value, price.value, rating.value);
-
-  // if(price.value == 'LH'){
-  //   let sortedData = [...mainData]; // Create a copy of the main data array
-  //   sortedData.sort((a, b) => a.price - b.price); // Sort the array based on price in ascending order
-  //   mapping(sortedData);
-  // }else if(price.value == 'HL'){
-  //    let sortedData = [...mainData]; // Create a copy of the main data array
-  //   sortedData.sort((a, b) => b.price - a.price); // Sort the array based on price in ascending order
-  //   mapping(sortedData);
-  // }else{
-  //   mapping(mainData);
-
-  // }
+function getSorted() {
+  getData(category.value, sort.value);
 }
 
-async function getRate() {
-  getData(category.value, price.value, rating.value);
-  // if(Rating.value=='LH'){
-  //   let sortData =[...mainData]
-  //       sortData.sort((a, b) => {
-  //         return a.rating.rate - b.rating.rate;
-  //       });
-  //       console.log(sortData);
-  //   mapping(sortData);
-
-  // }else if(Rating.value=='HL'){
-  //   let sortData = [...mainData];
-  //   sortData.sort((a, b) => {
-  //     return b.rating.rate - a.rating.rate;
-  //   });
-  //   mapping(sortData);
-
-  // }else{
-  //   mapping(mainData)
-  // }
-}
-
-// let Rating = document.getElementById("Rating");
-// Rating.addEventListener("click", getRating);
-
-// async function getRating() {
-//   let sortRating = [...mainData];
-//   sortRating.sort((a, b) => a.rating.rate - b.rating.rate);
-//   mapping(sortRating);
-
-// let rate = document.getElementById('Rating')
-// rate.addEventListener('click', )
-
-// async function getRate(){
-//   let sortRate = [...mainData]
-// }
-// }
+/**
+ * main fucntion  pura dta aur mapped UI p
+ * 2 catwgory and sorting
+ *
+ * u
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */

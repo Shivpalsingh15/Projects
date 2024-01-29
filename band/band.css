@@ -1,3 +1,8 @@
+*{
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
 body{
     margin: 0;
     padding: 0;
@@ -6,12 +11,15 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: rgb(248, 247, 245);
-    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+    /* box-shadow: 0px 2px 4px rgb(0, 0, 0); */
     height: 50px;
     align-items: center;
     /* position: fixed;
     top: 0; */
     width: 100%;
+    position: sticky;
+    z-index: 1;
+    top: 0;
     /* padding: 10px; */
 }
 #rigthnav a{
@@ -19,9 +27,14 @@ body{
     justify-content: flex-end;
     width: 50%; */
     margin-right: 19px;
+    
+}
+#leftnav{
 
- }
+    margin-left: 10px;  
+}
 #nav a{
+    color: black;
     text-decoration: none;
     letter-spacing: 4px;
     padding: 12px;
@@ -42,27 +55,33 @@ body{
     position: relative;
     
 }
+
 #centerText{
     position: absolute;
     top: 50%;
     left: 50%;
+    /* border: 2px solid red; */
+    text-align: center;
+    text-align: center;
+    letter-spacing: 4px;
+    transform: translate(-50%, -50%);
+}
+#centerText span{
+    font-size: 30px;
+    padding: 20px;
+
+}
+#br{
+    /* padding: 8px 12px; */
+    background-color: black;
+    color: aliceblue;
 }
 
 #project{
     padding: 10px;
     font-size: 19px;
 }
-    /* #first{
-        position: absolute;
-    }
-    #firstp{
-        position: relative;
-        top: 0;
-        padding: 5px;
-        color: white;
-        /* background-color: black; */
-        
-    } */
+   
 
 /* .innerPhoto{
     width: 50%;
@@ -71,7 +90,7 @@ body{
 } */
 #eightPhoto {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     width: 90%; /* Adjust the width as needed */
     margin: auto; /* Center the grid */
@@ -80,5 +99,85 @@ body{
 .innerPhoto img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Add rounded corners for a nicer look */
+}
+.firstp{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(1, 0, 0);
+}
+.innerPhoto{
+    position: relative;
+}
+.fourpics{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    /* border: 1px solid grey; */
+    
+}
+#contact{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 5px;
+}
+.work{
+    color: grey;
+}
+.contact{
+    
+    margin: 50px 0px;
+
+}
+.firstpic img{
+    width: 100%;
+    /* border: 1px solid grey; */
+}
+#input{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#input input{
+    padding: 10px;
+}
+#msg{
+    /* margin: 50px 0px; */
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+}
+.last img{
+    /* width: 100%; */
+    margin: auto;
+}
+.last{
+    /* border: 1px solid green; */
+    /* width: initial; */
+    margin-top: 50px;
+    
+}
+footer{
+    padding: 35px;
+    color: white;
+    background-color: black;
+    text-align: center;
+
+}
+#rigthnav i{
+    display: none;
+    /* overflow: hidden; */
+}
+
+@media all and (max-width: 991px){
+    .toggle-bar{
+        display: flex;
+    }
+    #rigthnav{
+        display: none;
+
+    }
+
 }

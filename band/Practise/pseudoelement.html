@@ -1,26 +1,35 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elements</title>
     <style>
-      /* The first line of every <p> element. */
         body{
             
             border: 2px solid black;
         }
-        nav {
+        /* nav {
             display: flex;
             justify-content: space-evenly;
             
-        }
-        p{
+        } */
+        /* p{
             border: 2px solid blue;
 
-        }
+        } */
         p:hover::after{
             content:  "Hello";
+        }
+        input{
+            margin: 10px;
+        }
+        input::placeholder{
+            color: orange;
+            /* font-size: large; */
+            margin: 15px;
+            /* padding: 21px */
+            text-align: center;
         }
      
     </style>
@@ -30,8 +39,9 @@
         <p>Home</p>
         <p>Services</p>
         <p>Contact</p>
+        <input type="text" placeholder="write our text.">
 
     </nav>
   </body>
-</html> -->
+</html> 
 
